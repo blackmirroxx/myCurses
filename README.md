@@ -31,3 +31,22 @@ and you get
 
 In order to keep things simple as possible, I did not implement any cmake or other build stuff. 
 This makes it an easy way to just getting started XD 
+
+Now if you want to check all available C++ version on you OS you can run 
+
+
+```bash
+chmod a+x checkC++Version.sh
+sh ./chechC++Version.sh
+```
+
+The result shoul look like this : 
+
+```bash 
+c++98: #define __cplusplus 199711L
+c++11: #define __cplusplus 201103L
+c++14: #define __cplusplus 201402L
+c++17: #define __cplusplus 201703L
+c++20: #define __cplusplus 202002L
+c++23: #define __cplusplus 202302L
+```
