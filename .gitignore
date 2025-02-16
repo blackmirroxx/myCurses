@@ -1,0 +1,10 @@
+*
+!*.*
+!*/ 
+*.o
+*.hi
+*.class
+*.log
+
+pdfScanTableRenaultPython/output2.csv
+pdfScanTableRenaultPython/output2.zip
