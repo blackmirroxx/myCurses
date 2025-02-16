@@ -15,3 +15,5 @@ int main(void){
 	std::cout << "pointer_to_void" <<  pointer_to_void  << " points to " << *((int*)pointer_to_void) <<  std::endl;   
     return 0;
 }
+// compile $> g++ -std=c++17 -o any any.cpp
+// execute $> ./any
