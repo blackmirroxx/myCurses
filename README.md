@@ -32,7 +32,7 @@ and you get
 In order to keep things simple as possible, I did not implement any cmake or other build stuff. 
 This makes it an easy way to just getting started XD 
 
-Now if you want to check all available C++ version on you OS you can run 
+Now if you want to check all available C++ versions on you OS you can run 
 
 
 ```bash
@@ -40,7 +40,7 @@ chmod a+x checkC++Version.sh
 sh ./chechC++Version.sh
 ```
 
-The result shoul look like this : 
+The results shoul look like this : 
 
 ```bash 
 c++98: #define __cplusplus 199711L
