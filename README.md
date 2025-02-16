@@ -40,7 +40,7 @@ chmod a+x checkC++Version.sh
 sh ./chechC++Version.sh
 ```
 
-The results shoul look like this : 
+The results should look like this : 
 
 ```bash 
 c++98: #define __cplusplus 199711L
