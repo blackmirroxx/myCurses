@@ -2,7 +2,8 @@
 #include <iostream>
 #include <any>
 
-int main(void){
+auto main(void) -> int
+{
     int i = 7;
     int *i_p = &i;
 
