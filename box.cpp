@@ -121,4 +121,5 @@ void create_box(WIN *p_win, bool flag)
 
 
 // g++ -std=c++17 box.cpp -ltinfo -lncurses -o box
-//
+// atlernative g++ -std=c++23 box.cpp -ltinfo -lncurses -o box 
+// execute : ./box  -> use the arrows to move the box arround 
