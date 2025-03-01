@@ -21,7 +21,7 @@ auto main(int argc, char *argv[]) -> int
 }
 auto print_in_middle(WINDOW *win, int starty, int startx, int width, const char *string) -> void
 {	int length, x, y;
-	float temp;
+	int temp;
 
 	if(win == NULL) win = stdscr;
 	getyx(win, y, x);
@@ -30,11 +30,11 @@ auto print_in_middle(WINDOW *win, int starty, int startx, int width, const char 
 	if(width == 0) width = COLS; // terminal 80 -> can be different 
 
 	length = strlen(string);
-	temp = (int)((float)(width - length)/ (float)2);
+	temp = (width - length)/ 2;
 	x = startx + (int)temp;
 	mvwprintw(win, y, x, "%s", string);
 	refresh();
 }
 
-// compile : g++ -std=c++17 color.cpp -ltinfo -lncurses -o color
+// compile : g++ -std=c++23 color.cpp -ltinfo -lncurses -o color
 // execute : ./color
