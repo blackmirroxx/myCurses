@@ -8,3 +8,14 @@
 
 pdfScanTableRenaultPython/output2.csv
 pdfScanTableRenaultPython/output2.zip
+
+# Ignore the target directory (binaries, build artifacts)
+target/
+
+# Ignore Rust lockfile if you don’t want to commit it (optional)
+# Cargo.lock
+
+# Ignore editor/IDE files (optional, adjust as needed)
+*.swp  # Vim swap files
+.idea/ # IntelliJ IDEA
+.vscode/ # VS Code
