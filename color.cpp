@@ -2,7 +2,7 @@
 #include <cstdlib> // for exit
 #include <cstring>
 
-void print_in_middle(WINDOW *win, int starty, int startx, int width, char *string);
+void print_in_middle(WINDOW *win, int starty, int startx, int width, const char *string);
 auto main(int argc, char *argv[]) -> int
 {	initscr();			/* Start curses mode 		*/
 	if(has_colors() == FALSE)
@@ -19,7 +19,7 @@ auto main(int argc, char *argv[]) -> int
     	getch();
 	endwin();
 }
-auto print_in_middle(WINDOW *win, int starty, int startx, int width, char *string) -> void
+auto print_in_middle(WINDOW *win, int starty, int startx, int width, const char *string) -> void
 {	int length, x, y;
 	float temp;
 
