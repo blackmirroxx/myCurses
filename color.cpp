@@ -1,4 +1,3 @@
-#include <curses.h>
 #include <ncurses.h>
 #include <cstdlib> // for exit
 #include <cstring>
