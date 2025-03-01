@@ -30,7 +30,7 @@ auto print_in_middle(WINDOW *win, int starty, int startx, int width, const char 
 	if(width == 0) width = 80;
 
 	length = strlen(string);
-	temp = (width - length)/ 2;
+	temp = (int)((float)(width - length)/ (float)2);
 	x = startx + (int)temp;
 	mvwprintw(win, y, x, "%s", string);
 	refresh();
