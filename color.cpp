@@ -3,7 +3,7 @@
 #include <cstring>
 
 void print_in_middle(WINDOW *win, int starty, int startx, int width, char *string);
-int main(int argc, char *argv[])
+auto main(int argc, char *argv[]) -> int
 {	initscr();			/* Start curses mode 		*/
 	if(has_colors() == FALSE)
 	{	endwin();
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     	getch();
 	endwin();
 }
-void print_in_middle(WINDOW *win, int starty, int startx, int width, char *string)
+auto print_in_middle(WINDOW *win, int starty, int startx, int width, char *string) -> void
 {	int length, x, y;
 	float temp;
 
@@ -40,6 +40,5 @@ void print_in_middle(WINDOW *win, int starty, int startx, int width, char *strin
 	refresh();
 }
 
-// to compile run 
-// g++ -std=c++17 color.cpp -ltinfo -lncurses -o color
-//
+// compile : g++ -std=c++17 color.cpp -ltinfo -lncurses -o color
+// execute : ./color
