@@ -37,7 +37,7 @@ Now if you want to check all available C++ versions on you OS you can run
 
 ```bash
 chmod a+x checkC++Version.sh
-sh ./chechC++Version.sh
+sh ./checkC++Version.sh
 ```
 
 The results should look like this : 
