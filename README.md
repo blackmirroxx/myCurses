@@ -50,3 +50,20 @@ c++17: #define __cplusplus 201703L
 c++20: #define __cplusplus 202002L
 c++23: #define __cplusplus 202302L
 ```
+
+---
+# additonaly in Rust 
+
+Some examples are written in Rust. In contrast to the *.cpp files the rust files are in a folder 
+e.g. the Rust corressponding color.cpp is in "colorRust/color-rs" aka in its own rust cargo folder. 
+Navigato to the path where the "Cargo.toml" is. To build it run : 
+
+```bash 
+cargo build --release
+```
+
+After that: You will have the the binaries inside the "target/release" folder. Then run: 
+
+```bash 
+./target/release/color-rs
+```
