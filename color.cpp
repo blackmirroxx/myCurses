@@ -1,3 +1,4 @@
+#include <curses.h>
 #include <ncurses.h>
 #include <cstdlib> // for exit
 #include <cstring>
@@ -27,7 +28,7 @@ auto print_in_middle(WINDOW *win, int starty, int startx, int width, const char 
 	getyx(win, y, x);
 	if(startx != 0) x = startx;
 	if(starty != 0) y = starty;
-	if(width == 0) width = 80;
+	if(width == 0) width = COLS; // terminal 80 -> can be different 
 
 	length = strlen(string);
 	temp = (int)((float)(width - length)/ (float)2);
