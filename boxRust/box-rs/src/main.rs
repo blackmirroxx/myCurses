@@ -62,7 +62,7 @@ fn create_box(p_win: &Win, flag: bool) {
     let h = p_win.height;
 
     if flag {
-        mvaddch(y, x, p_win.border.tl.try_into().unwrap());
+        mvaddch(y, x, p_win.border.tl.try_into().unwrap()); // covert i32 -> u32
         mvaddch(y, x + w, p_win.border.tr.try_into().unwrap());
         mvaddch(y + h, x, p_win.border.bl.try_into().unwrap());
         mvaddch(y + h, x + w, p_win.border.br.try_into().unwrap());
