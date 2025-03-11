@@ -139,3 +139,4 @@ fn main() {
 
     endwin(); // End ncurses mode
 }
+// on older machines you may need to update your rust version first -> especially you cargo version 
