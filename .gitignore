@@ -11,6 +11,8 @@ pdfScanTableRenaultPython/output2.zip
 
 # Ignore the target directory (binaries, build artifacts)
 target/
+box2-rs/Cargo.lock
+
 
 # Ignore Rust lockfile if you don’t want to commit it (optional)
 # Cargo.lock
