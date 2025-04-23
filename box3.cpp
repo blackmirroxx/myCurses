@@ -125,4 +125,4 @@ auto main(int argc, char** argv) -> int
 }
 
 // to compile do;
-// g++ -std=c++17 box2.cpp -ltinfo -lmenu -lncurses -lpanel -o box2
+// g++ -std=c++23 box3.cpp -ltinfo -lmenu -lncurses -lpanel -o box3
