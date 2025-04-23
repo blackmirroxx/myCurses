@@ -393,5 +393,5 @@ auto main(int argc, char** argv) -> int
 }
 
 // to compile do;
-// g++ -std=c++17 box4colored.cpp -ltinfo -lmenu -lncurses -lpanel -o box4colored
+// g++ -std=c++23 box4colored.cpp -ltinfo -lmenu -lncurses -lpanel -o box4colored
 // execute -> $> ./box4color 30 10 3 6 "rc3 rulez"
