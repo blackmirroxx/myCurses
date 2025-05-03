@@ -111,8 +111,8 @@ auto main(int argc, char** argv) -> int
     n.refreshSession();
 
     // create a box
-    MyBox  b_acs;
-    // MyBox b(argv[1]);
+    // MyBox  b_acs;
+    MyBox b(argv[1]);
     // MyBox b(std::stoi(argv[1]), std::stoi(argv[2]), std::stoi(argv[3]), std::stoi(argv[4]), argv[5]);
 
     // get user input
