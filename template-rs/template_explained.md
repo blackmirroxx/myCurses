@@ -1,6 +1,3 @@
-Sure! Here's the **Rust code explanation** formatted as a clean and readable **Markdown (`.md`) file**:
-
----
 
 ````markdown
 # Rust Generic Wrapper Explanation
