@@ -94,9 +94,4 @@ This code demonstrates:
 
 It's a solid example of how **generic programming and test-driven development** work together in Rust.
 
-```
 
----
-
-Let me know if you'd like it exported as a `.md` file or rendered as a PDF with formatting!
-```
