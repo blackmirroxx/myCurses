@@ -2,7 +2,9 @@ use ncurses::*;
 use std::ffi::CString;
 use std::os::raw::c_char;
 
-struct NCurseSession;
+struct NCurseSession{
+    s: String,
+}
 
 impl NCurseSession {
     fn start_session() -> Result<(), ()> {
