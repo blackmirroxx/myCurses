@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <panel.h>
 #include <string>
 #include <cstring>
@@ -112,6 +113,7 @@ auto main(int argc, char** argv) -> int
 
     // create a box
     // MyBox  b_acs;
+    if(argc<1) {std::cout << "run ::  ./box3 your_snail_text" << std::endl; return EXIT_SUCCESS; }
     MyBox b(argv[1]);
     // MyBox b(std::stoi(argv[1]), std::stoi(argv[2]), std::stoi(argv[3]), std::stoi(argv[4]), argv[5]);
 
@@ -126,3 +128,4 @@ auto main(int argc, char** argv) -> int
 
 // to compile do;
 // g++ -std=c++23 box3.cpp -ltinfo -lmenu -lncurses -lpanel -o box3
+// to execute :: ./box your_snail_text
