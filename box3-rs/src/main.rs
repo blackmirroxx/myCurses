@@ -1,30 +1,28 @@
 use ncurses::*;
-use std::ffi::CString;
-use std::os::raw::c_char;
 
-struct NCurseSession{
+struct NCurseSession {
     s: String,
 }
 
 impl NCurseSession {
-    fn start_session() -> Result<(), ()> {
+    fn start_session(&self) -> Result<(), ()> {
         initscr();
         cbreak(); // Line buffering disabled, pass everything to the program
         noecho(); // Don't echo input
         Ok(())
     }
 
-    fn end_session() -> Result<(), ()> {
+    fn end_session(&self) -> Result<(), ()> {
         endwin();
         Ok(())
     }
 
-    fn refresh_session() -> Result<(), ()> {
+    fn refresh_session(&self) -> Result<(), ()> {
         refresh();
         Ok(())
     }
 
-    fn get_user_input() -> Result<i32, ()> {
+    fn get_user_input(&self) -> Result<i32, ()> {
         let input = getch();
         Ok(input)
     }
@@ -56,17 +54,7 @@ impl MyBox {
         let blc = ACS_LLCORNER();
         let brc = ACS_LRCORNER();
 
-        wborder(
-            win,
-            left,
-            right,
-            top,
-            bottom,
-            tlc,
-            trc,
-            blc,
-            brc,
-        );
+        wborder(win, left, right, top, bottom, tlc, trc, blc, brc);
         mvwprintw(win, 1, 2, "This is my box");
         wrefresh(win);
 
@@ -103,11 +91,17 @@ impl MyBox {
 fn main() {
     let args: Vec<String> = std::env::args().collect();
 
-    let mut n = NCurseSession::new();
+    // Directly initialize NCurseSession without using a constructor method
+    let n = NCurseSession { s: String::new() };
+
     n.start_session().unwrap();
     n.refresh_session().unwrap();
 
-    if args.len() < 2 {n.end_session().unwrap(); println!("Run :: ./box your_snail_text"); return; }
+    if args.len() < 2 {
+        n.end_session().unwrap();
+        println!("Run :: ./box your_snail_text");
+        return;
+    }
 
     let _b = MyBox::with_text(&args[1]);
     let _s = n.get_user_input().unwrap();
