@@ -67,7 +67,7 @@ impl MyBox {
             blc,
             brc,
         );
-        mvwprintw(win, 1, 2, CString::new("This is my box").unwrap().as_c_str());
+        mvwprintw(win, 1, 2, "This is my box");
         wrefresh(win);
 
         MyBox {
@@ -87,7 +87,7 @@ impl MyBox {
         let win = newwin(height, width, start_y, start_x);
         refresh();
         box_(win, 0, 0);
-        mvwprintw(win, 1, 2, CString::new(text).unwrap().as_c_str());
+        mvwprintw(win, 1, 2, text);
         wrefresh(win);
 
         MyBox {
@@ -103,7 +103,7 @@ impl MyBox {
 fn main() {
     let args: Vec<String> = std::env::args().collect();
 
-    let n = NCurseSession;
+    let mut n = NCurseSession::new();
     n.start_session().unwrap();
     n.refresh_session().unwrap();
 
