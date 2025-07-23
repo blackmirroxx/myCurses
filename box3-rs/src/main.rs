@@ -105,11 +105,7 @@ fn main() {
     n.start_session().unwrap();
     n.refresh_session().unwrap();
 
-    if args.len() < 2 {
-        n.end_session().unwrap();
-        println!("Run :: ./box your_snail_text");
-        return;
-    }
+    if args.len() < 2 {n.end_session().unwrap(); println!("Run :: ./box your_snail_text"); return; }
 
     let _b = MyBox::with_text(&args[1]);
     let _s = n.get_user_input().unwrap();
