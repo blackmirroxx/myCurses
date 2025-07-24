@@ -5,6 +5,7 @@
 *.hi
 *.class
 *.log
+*.lock
 
 pdfScanTableRenaultPython/output2.csv
 pdfScanTableRenaultPython/output2.zip
