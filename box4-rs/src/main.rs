@@ -72,8 +72,9 @@ impl Coordinate {
         Coordinate { start_y, start_x }
     }
 
-    fn set_start_y() -> i32 {
-        
+    fn set_start_y(&mut self, start_y: i32) -> i32 {
+        self.start_y = start_y;
+        self.start_y
     }
 }
 
