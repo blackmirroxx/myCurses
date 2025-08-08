@@ -42,6 +42,10 @@ struct Field{
     height: i32,
 }
 
+impl Field {
+    
+}
+
 fn main() {
     println!("Hello, world!");
 }
