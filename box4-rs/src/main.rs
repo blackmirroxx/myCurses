@@ -58,6 +58,8 @@ impl Field {
        self.height = height;
        self.height
    }  
+
+   fn get_height() -> i32 {}      
 }
 
 fn main() {
