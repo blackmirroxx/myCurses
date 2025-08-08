@@ -44,10 +44,7 @@ class Parameter{
 
         auto getArguments(int i) -> std::string
         {
-            if(i>=psize)
-            {
-                i = 0; // check overflow
-            }
+            if(i>=psize) i = 0; // check overflow            
             return arguments[i];
         }
 
