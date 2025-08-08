@@ -43,7 +43,7 @@ struct Field{
 }
 
 impl Field {
-    
+   fn new() -> Self {} 
 }
 
 fn main() {
