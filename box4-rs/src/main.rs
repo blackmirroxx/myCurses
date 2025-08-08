@@ -30,6 +30,10 @@ impl Parameter {
     fn set_arguments(&mut self, args: Vec<String>){
         self.arguments = args;
     }
+
+    fn get_arguments(&self, i: usize) -> String {
+
+    }
     
 }
 
