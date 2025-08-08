@@ -68,7 +68,13 @@ struct Coordinate {
 }
 
 impl Coordinate {
-    
+    fn new(start_y: i32, start_x: i32) -> Self {
+        Coordinate { start_y, start_x }
+    }
+
+    fn set_start_y() -> i32 {
+        
+    }
 }
 
 fn main() {
