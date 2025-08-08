@@ -28,7 +28,7 @@ impl Parameter {
     }
 
     fn set_arguments(&mut self, args: Vec<String>){
-        set.arguments = args;
+        self.arguments = args;
     }
     
 }
