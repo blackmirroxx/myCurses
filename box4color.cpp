@@ -1,7 +1,5 @@
 #include <panel.h>
 #include <string>
-#include <cstring>
-#include <iostream>
 #include <cstdlib>
 #include <ncurses.h>
 #include <algorithm>
