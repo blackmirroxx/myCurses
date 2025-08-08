@@ -32,9 +32,9 @@ impl Parameter {
     }
 
     fn get_arguments(&self, i: usize) -> String {
-
+        if i>=self.psize {return String::new(); }
+        self.arguments[i].clone() // no colon for the return    
     }
-    
 }
 
 fn main() {
