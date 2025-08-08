@@ -67,6 +67,10 @@ struct Coordinate {
     start_x: i32,
 }
 
+impl Coordinate {
+    
+}
+
 fn main() {
     println!("Hello, world!");
 }
