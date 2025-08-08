@@ -43,7 +43,11 @@ struct Field{
 }
 
 impl Field {
-   fn new() -> Self {} 
+   fn new(width: i32, height: i32) -> Self {
+       Field { width, height }
+   } 
+
+   fn set_width() -> i32 {}  
 }
 
 fn main() {
