@@ -37,6 +37,11 @@ impl Parameter {
     }
 }
 
+struct Field{
+    width: i32,
+    height: i32,
+}
+
 fn main() {
     println!("Hello, world!");
 }
