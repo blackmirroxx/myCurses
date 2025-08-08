@@ -59,7 +59,12 @@ impl Field {
        self.height
    }  
 
-   fn get_height() -> i32 {}      
+   fn get_height(&self) -> i32 {self.height }      
+}
+
+struct Coordinate {
+    start_y: i32,
+    start_x: i32,
 }
 
 fn main() {
