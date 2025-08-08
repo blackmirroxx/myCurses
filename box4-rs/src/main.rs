@@ -54,7 +54,10 @@ impl Field {
    
    fn get_width(&self) -> i32 {self.width }
 
-   fn set_height() -> i32 {}  
+   fn set_height(&mut self, height: i32) -> i32 {
+       self.height = height;
+       self.height
+   }  
 }
 
 fn main() {
