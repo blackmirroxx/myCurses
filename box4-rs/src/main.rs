@@ -52,7 +52,9 @@ impl Field {
        self.width  
    }  
    
-   fn get_width() -> i32 {}
+   fn get_width(&self) -> i32 {self.width }
+
+   fn set_height() -> i32 {}  
 }
 
 fn main() {
