@@ -22,6 +22,17 @@ struct Parameter {
     arguments : Vec<String>,
 }
 
+impl Parameter {
+    fn new(psize: usize) -> Self {
+        Parameter { psize, arguments: Vec::new() }
+    }
+
+    fn set_arguments(&mut self, args: Vec<String>){
+        set.arguments = args;
+    }
+    
+}
+
 fn main() {
     println!("Hello, world!");
 }
