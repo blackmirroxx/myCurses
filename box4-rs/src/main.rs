@@ -78,6 +78,7 @@ impl Coordinate {
     }
 }
 
+// a lot of code for just "Hello, world!"
 fn main() {
     println!("Hello, world!");
 }
