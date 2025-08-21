@@ -81,6 +81,14 @@ impl Coordinate {
     }
 }
 
+struct NCurseSession {
+    s: String,
+}
+
+impl NCurseSession {
+    // add code here
+}
+
 // a lot of code for just "Hello, world!"
 fn main() {
     println!("Hello, world!");
