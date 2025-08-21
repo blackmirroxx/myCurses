@@ -1,5 +1,5 @@
 use ncurses::{ll::{cbreak, getch, initscr, refresh, start_color}, *}; 
-use std::env;
+use std::{env, usize};
 
 #[derive(Debug)]
 enum Colors {
@@ -111,6 +111,10 @@ impl NCurseSession {
     fn get_user_input(&self) -> Result<i32, ()> {
         let input = getch();
         Ok(())
+    }
+
+    fn is_standard_box(&self, param_count: usize) -> bool {
+        param_count = ArgumentsForBox::BoxStandard as usize
     }
 
 }
