@@ -1,4 +1,4 @@
-use ncurses::{ll::{cbreak, getch, initscr, mvprintw, newwin, refresh, start_color, wborder, wrefresh}, refresh, *}; 
+use ncurses::{ll::{cbreak, getch, initscr, mvprintw, newwin, refresh, start_color, wborder, wrefresh}, newwin, refresh, wrefresh, *}; 
 use std::{env, usize};
 
 #[derive(Debug)]
@@ -152,6 +152,19 @@ impl MyBox {
             height, width, start_x, start_y, win,
         }
     } 
+
+    fn with_text(text: &str) -> Self {
+        let height = 20;
+        let width = 40; 
+        let start_y = 3; 
+        let start_x = 10; 
+        let win = newwin(height, width, start_y, start_y);
+        refresh();
+        box_(win, 1, 2, text);
+        wrefresh(win);
+
+        MyBox { height: (), width: (), start_x: (), start_y: (), win: () }
+    }
 }
 
 // a lot of code for just "Hello, world!"
