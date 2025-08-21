@@ -114,7 +114,15 @@ impl NCurseSession {
     }
 
     fn is_standard_box(&self, param_count: usize) -> bool {
-        param_count = ArgumentsForBox::BoxStandard as usize
+        param_count == ArgumentsForBox::BoxStandard as usize
+    }
+
+    fn is_box_with_text(&self, param_count: usize) -> bool {
+        param_count == ArgumentsForBox::BoxWithText as usize
+    }
+
+    fn is_box_with_text(&self, param_count: usize) -> bool {
+        param_count == ArgumentsForBox::BoxWithFieldCoordinatesAndText as usize
     }
 
 }
