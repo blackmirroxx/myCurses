@@ -1,4 +1,4 @@
-use ncurses::*; 
+use ncurses::{ll::{cbreak, getch, initscr, refresh, start_color}, *}; 
 use std::env;
 
 #[derive(Debug)]
@@ -86,7 +86,33 @@ struct NCurseSession {
 }
 
 impl NCurseSession {
-    // add code here
+    fn new() -> Self {
+        NCurseSession { s: String::new() }
+    }
+
+    fn start_session(&self) -> Result<(), ()> {
+        initscr();
+        cbreak();
+        noecho(); 
+        start_color();
+        Ok(())
+    }
+
+    fn end_session(&self) -> Result<(), ()> {
+        endwin();
+        Ok(())
+    }
+
+    fn refresh_sesssion(&self) -> Result<(), ()> {
+        refresh();
+        Ok(())
+    }
+
+    fn get_user_input(&self) -> Result<i32, ()> {
+        let input = getch();
+        Ok(())
+    }
+
 }
 
 // a lot of code for just "Hello, world!"
