@@ -1,4 +1,4 @@
-use ncurses::{ll::{cbreak, getch, initscr, mvprintw, newwin, refresh, start_color, wborder, wrefresh}, newwin, refresh, wrefresh, *}; 
+use ncurses::{ll::{box_, cbreak, getch, initscr, mvprintw, newwin, refresh, start_color, wborder, wrefresh}, newwin, refresh, wrefresh, *}; 
 use std::{env, usize};
 
 #[derive(Debug)]
@@ -164,6 +164,16 @@ impl MyBox {
         wrefresh(win);
 
         MyBox { height: (), width: (), start_x: (), start_y: (), win: () }
+    }
+
+    fn with_field_coordinates_and_text(f: &Field, c: &Coordinate, text: &str) -> Self {
+        let win = newwin(f.get_height(), f.get_width(), c.get_start_y(), c.get_start_x()); 
+        refresh(); 
+        box_(win, 0, 0);
+        mvwprintw(win, 1, 2, text);
+        wrefresh(win);
+        MyBox { height: f.get_height(), width: f.get_width(), start_x: c.get_start_x(), start_y: c.get_start_y(), win: () }
+
     }
 }
 
