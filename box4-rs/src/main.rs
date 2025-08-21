@@ -1,4 +1,4 @@
-use ncurses::{ll::{cbreak, getch, initscr, refresh, start_color}, *}; 
+use ncurses::{ll::{cbreak, getch, initscr, mvprintw, newwin, refresh, start_color, wborder, wrefresh}, refresh, *}; 
 use std::{env, usize};
 
 #[derive(Debug)]
@@ -133,6 +133,25 @@ struct MyBox {
     start_x: i32, 
     start_y: i32,
     win: WINDOW,
+}
+
+impl MyBox {
+    fn new() -> Self {
+        let height = 10; 
+        let width = 30; 
+        let start_y = 3; 
+        let start_x = 10; 
+        let win = newwin(height, width, start_y, start_x);
+        refresh();
+
+        wborder(win, ACS_VLINE(), ACS_VLINE(), ACS_HLINE(), ACS_HLINE(), ACS_ULCORNER(), ACS_PLUS(), ACS_LLCORNER(), ACS_LRCORNER(),);
+        mvwprintw(win, 1, 2, "This is my box");
+        wrefresh(win);
+
+        MyBox {
+            height, width, start_x, start_y, win,
+        }
+    } 
 }
 
 // a lot of code for just "Hello, world!"
