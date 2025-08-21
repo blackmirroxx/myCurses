@@ -127,6 +127,14 @@ impl NCurseSession {
 
 }
 
+struct MyBox {
+    height: i32, 
+    width: i32, 
+    start_x: i32, 
+    start_y: i32,
+    win: WINDOW,
+}
+
 // a lot of code for just "Hello, world!"
 fn main() {
     println!("Hello, world!");
