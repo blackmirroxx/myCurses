@@ -26,5 +26,5 @@ auto leastPrimeGreaterThan(int b) -> int
    return *std::find_if(primes.begin(), primes.end(), [b] (int v) {return v > b; }); 
 }
 
-// compile it with g++ -std=c++17 -o prime m17 
+// compile it with g++ -std=c++17 -o prime m17.cpp 
 // execute ./prime 
