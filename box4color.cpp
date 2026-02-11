@@ -389,4 +389,5 @@ auto main(int argc, char** argv) -> int
 
 // to compile do;
 // g++ -std=c++23 box4colored.cpp -ltinfo -lmenu -lncurses -lpanel -o box4colored
+// on netBSD :: g++ -std=c++17 -I/usr/pkg/include -I/usr/pkg/include/ncurses box4color.cpp -L/usr/pkg/lib -lncurses -lpanel -o box4color
 // execute -> $> ./box4color 30 10 3 6 "rc3 rulez"
